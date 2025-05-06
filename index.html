@@ -3,86 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - IT Portfolio</title>
+    <title>Dhananjaya Weerakoon - IT Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom animations */
+        @keyframes slideInLeft {
+            from { transform: translateX(-100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        @keyframes slideInRight {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        @keyframes fadeInUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .animate-slide-left {
+            animation: slideInLeft 0.8s ease-out forwards;
+        }
+        .animate-slide-right {
+            animation: slideInRight 0.8s ease-out forwards;
+        }
+        .animate-fade-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        /* Trigger animations on scroll */
+        .section-hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+        .section-visible {
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
 </head>
-<body class="bg-gray-100 font-sans">
+<body class="bg-gradient-to-b from-purple-100 to-blue-100 font-sans">
     <!-- Header Section -->
-    <header class="bg-blue-600 text-white py-6">
+    <header class="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-8 shadow-lg">
         <div class="container mx-auto text-center">
-            <h1 class="text-4xl font-bold">Your Name</h1>
-            <p class="text-lg mt-2">IT Student at SLIIT | Aspiring Intern</p>
+            <h1 class="text-5xl font-extrabold animate-fade-up">Dhananjaya Weerakoon</h1>
+            <p class="text-xl mt-3 animate-fade-up animation-delay-200">IT Student at SLIIT | Aspiring Software Engineer</p>
         </div>
     </header>
 
     <!-- About Section -->
-    <section id="about" class="py-12">
+    <section id="about" class="py-16 section-hidden">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-semibold text-center mb-6">About Me</h2>
-            <p class="text-lg text-gray-700 max-w-3xl mx-auto">
-                I am a passionate IT student at the Sri Lanka Institute of Information Technology (SLIIT), currently seeking internship opportunities to apply my skills in real-world projects. I have experience in various programming languages and technologies, with a strong foundation in software development and problem-solving.
+            <h2 class="text-4xl font-bold text-center mb-8 text-purple-700 animate-slide-left">About Me</h2>
+            <p class="text-lg text-gray-800 max-w-3xl mx-auto bg-white p-6 rounded-xl shadow-md animate-slide-right">
+                I am a driven Information Technology student at the Sri Lanka Institute of Information Technology (SLIIT), pursuing a BSc (Hons) in IT with a focus on software development. With hands-on experience as a Full Stack Developer Intern at Difynbest Solution PVT LTD, I have honed my skills in the MERN stack, building responsive web applications and RESTful APIs. My projects, including a movie theater management system and a tourism management platform, showcase my ability to deliver scalable, user-friendly solutions. Proficient in languages like JavaScript, Java, and Python, and tools like Git and Figma, I am passionate about crafting innovative software and am eager to contribute to dynamic teams as an intern.
             </p>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="bg-white py-12">
+    <section id="skills" class="bg-white py-16 section-hidden">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-semibold text-center mb-6">Skills</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
-                <div class="bg-gray-100 p-4 rounded-lg text-center">
-                    <h3 class="text-xl font-medium">Programming Languages</h3>
-                    <p class="text-gray-600">Python, Java, JavaScript, C++</p>
+            <h2 class="text-4xl font-bold text-center mb-8 text-blue-700 animate-slide-left">Skills</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                <div class="bg-gradient-to-br from-purple-500 to-blue-500 text-white p-6 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300 animate-fade-up">
+                    <h3 class="text-xl font-semibold">Programming Languages</h3>
+                    <p class="mt-2">Python, Java, JavaScript, C++, PHP, Kotlin</p>
                 </div>
-                <div class="bg-gray-100 p-4 rounded-lg text-center">
-                    <h3 class="text-xl font-medium">Web Development</h3>
-                    <p class="text-gray-600">HTML, CSS, Tailwind CSS, React</p>
+                <div class="bg-gradient-to-br from-purple-500 to-blue-500 text-white p-6 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300 animate-fade-up animation-delay-200">
+                    <h3 class="text-xl font-semibold">Web Development</h3>
+                    <p class="mt-2">HTML, CSS, Tailwind CSS, React, Bootstrap, SaaS</p>
                 </div>
-                <div class="bg-gray-100 p-4 rounded-lg text-center">
-                    <h3 class="text-xl font-medium">Tools & Platforms</h3>
-                    <p class="text-gray-600">Git, GitHub, VS Code, MySQL</p>
+                <div class="bg-gradient-to-br from-purple-500 to-blue-500 text-white p-6 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300 animate-fade-up animation-delay-400">
+                    <h3 class="text-xl font-semibold">Tools & Technologies</h3>
+                    <p class="mt-2">Git, MongoDB, MySQL, Figma, REST APIs, Android Studio</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-12">
+    <section id="projects" class="py-16 section-hidden">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-semibold text-center mb-6">Projects</h2>
+            <h2 class="text-4xl font-bold text-center mb-8 text-purple-700 animate-slide-left">Projects</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-medium">Project Title 1</h3>
-                    <p class="text-gray-600 mt-2">A brief description of your project, e.g., a web application built with React and Node.js to manage tasks.</p>
-                    <p class="text-gray-600 mt-2"><strong>Technologies:</strong> React, Node.js, MongoDB</p>
-                    <a href="https://github.com/yourusername/project1" class="text-blue-600 hover:underline mt-2 inline-block">View on GitHub</a>
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 animate-slide-right">
+                    <h3 class="text-xl font-semibold text-blue-600">JourneyX</h3>
+                    <p class="text-gray-600 mt-2">A tourism management system built with the MERN stack, featuring vehicle rental functionalities.</p>
+                    <p class="text-gray-600 mt-2"><strong>Technologies:</strong> MERN Stack, CSS, Bootstrap, Tailwind CSS, Git</p>
+                    <a href="https://github.com/yourusername/journeyx" class="text-purple-600 hover:text-purple-800 font-medium mt-2 inline-block transition-colors duration-200">View on GitHub</a>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-medium">Project Title 2</h3>
-                    <p class="text-gray-600 mt-2">A brief description of your project, e.g., a mobile app developed using Java for inventory management.</p>
-                    <p class="text-gray-600 mt-2"><strong>Technologies:</strong> Java, Android Studio</p>
-                    <a href="https://github.com/yourusername/project2" class="text-blue-600 hover:underline mt-2 inline-block">View on GitHub</a>
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 animate-slide-right animation-delay-200">
+                    <h3 class="text-xl font-semibold text-blue-600">Galaxy X Movie Theater System</h3>
+                    <p class="text-gray-600 mt-2">A responsive movie theater management system with CRUD operations for booking management.</p>
+                    <p class="text-gray-600 mt-2"><strong>Technologies:</strong> MERN Stack, CSS, Bootstrap, Git</p>
+                    <a href="https://github.com/yourusername/galaxyx" class="text-purple-600 hover:text-purple-800 font-medium mt-2 inline-block transition-colors duration-200">View on GitHub</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="bg-white py-12">
+    <section id="contact" class="bg-gradient-to-b from-blue-100 to-purple-100 py-16 section-hidden">
         <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl font-semibold mb-6">Get in Touch</h2>
-            <p class="text-lg text-gray-700 mb-4">Interested in working together? Feel free to reach out!</p>
-            <p class="text-lg text-gray-700">Email: <a href="mailto:your.email@example.com" class="text-blue-600 hover:underline">your.email@example.com</a></p>
-            <p class="text-lg text-gray-700">LinkedIn: <a href="https://linkedin.com/in/yourprofile" class="text-blue-600 hover:underline">linkedin.com/in/yourprofile</a></p>
-            <p class="text-lg text-gray-700">GitHub: <a href="https://github.com/yourusername" class="text-blue-600 hover:underline">github.com/yourusername</a></p>
+            <h2 class="text-4xl font-bold mb-8 text-blue-700 animate-slide-left">Get in Touch</h2>
+            <p class="text-lg text-gray-800 mb-6 animate-fade-up">Interested in working together? Feel free to reach out!</p>
+            <div class="space-y-4 animate-fade-up animation-delay-200">
+                <p class="text-lg text-gray-800">Email: <a href="mailto:Dpurnamalweerakoon@gmail.com" class="text-purple-600 hover:text-purple-800 transition-colors duration-200">Dpurnamalweerakoon@gmail.com</a></p>
+                <p class="text-lg text-gray-800">LinkedIn: <a href="https://www.linkedin.com/in/dhananjaya-purnamalweerakoon-8a8588257/" class="text-purple-600 hover:text-purple-800 transition-colors duration-200">Dhananjaya weerakoon</a></p>
+                <p class="text-lg text-gray-800">GitHub: <a href="https://github.com/Dhananajayaweerakoon" class="text-purple-600 hover:text-purple-800 transition-colors duration-200">github.com/Dhananjaya weerakoon</a></p>
+            </div>
+            <a href="mailto:Dpurnamalweerakoon@gmail.com" class="inline-block mt-6 bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 px-6 rounded-full hover:bg-gradient-to-r hover:from-purple-700 hover:to-blue-700 transform hover:scale-110 ">Contact Me</a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-blue-600 text-white py-4">
+    <footer class="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-6">
         <div class="container mx-auto text-center">
-            <p>&copy; 2025 Your Name. All rights reserved.</p>
+            <p class="animate-fade-up">© 2025 Dhananjaya Weerakoon. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- JavaScript for Scroll Animations -->
+    <script>
+        // Intersection Observer for section animations
+        const sections = document.querySelectorAll('.section-hidden');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('section-visible');
+                    entry.target.classList.remove('section-hidden');
+                }
+            });
+        }, { threshold: 0.2 });
+
+        sections.forEach(section => observer.observe(section));
+    </script>
 </body>
 </html>
