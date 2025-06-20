@@ -124,7 +124,7 @@
             left: 0;
             right: 0;
             z-index: 1000;
-            background: linear-gradient(to right, #7c3aed, #2563eb);
+            background: linear-gradient(to right, #7c3aed, #1b2a4a);
             padding: 1rem 0;
         }
         body {
@@ -148,22 +148,102 @@
                 padding-top: 140px;
             }
         }
+        /* Hero/Header Section as full page */
+        header.hero-header {
+            min-height: 100vh;
+            height: 100dvh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background: linear-gradient(to right, #7c3aed, #1b2a4a);
+            padding: 0;
+        }
+        .hero-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        .header-content {
+            text-align: left;
+            flex: 1;
+        }
+        .hero-image {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+        .hero-image img {
+            width: 320px;
+            height: 320px;
+            object-fit: cover;
+            border-radius: 50%;
+            box-shadow: 0 8px 32px rgba(60, 60, 120, 0.2);
+            border: 6px solid #fff;
+            background: #fff;
+        }
+        .nav-menu {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            z-index: 10;
+            display: flex;
+            gap: 1.5rem;
+            margin: 0;
+        }
+        @media (max-width: 900px) {
+            .hero-inner {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 0 1rem;
+            }
+            .header-content {
+                text-align: center;
+                margin-bottom: 2rem;
+            }
+            .hero-image {
+                justify-content: center;
+            }
+        }
+        @media (max-width: 600px) {
+            .hero-image img {
+                width: 180px;
+                height: 180px;
+            }
+            .nav-menu {
+                top: 1rem;
+                right: 1rem;
+                gap: 0.5rem;
+            }
+        }
+        body {
+            padding-top: 0 !important;
+        }
     </style>
 </head>
 <body class="bg-gradient-to-b from-purple-100 to-blue-100 font-sans">
     <!-- Header Section -->
-    <header class="bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg">
-        <div class="header-container">
+    <header class="hero-header text-white shadow-lg">
+        <nav class="nav-menu animate-fade-up animation-delay-400">
+            <a href="#about" class="nav-link">About</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+        <div class="hero-inner">
             <div class="header-content">
                 <h1 class="text-5xl font-extrabold animate-fade-up">Dhananjaya Weerakoon</h1>
                 <p class="text-xl mt-3 animate-fade-up animation-delay-200">IT Student at SLIIT | Aspiring Software Engineer</p>
             </div>
-            <nav class="nav-menu animate-fade-up animation-delay-400">
-                <a href="#about" class="nav-link">About</a>
-                <a href="#skills" class="nav-link">Skills</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="#contact" class="nav-link">Contact</a>
-            </nav>
+            <div class="hero-image animate-fade-up animation-delay-400">
+                <img src="profile.png" alt="Profile Photo" />
+            </div>
         </div>
     </header>
 
