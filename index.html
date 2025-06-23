@@ -225,17 +225,60 @@
         body {
             padding-top: 0 !important;
         }
+        .menu-bar-under-hero {
+            position: absolute;
+            bottom: 2.5rem;
+            right: 2.5rem;
+            z-index: 10;
+            width: auto;
+            height: auto;
+        }
+        .menu-bar-under-hero .nav-menu {
+            position: static;
+            display: flex;
+            gap: 1.5rem;
+            background: none;
+            padding: 0;
+            border-radius: 0;
+            box-shadow: none;
+        }
+        .menu-bar-under-hero .nav-link {
+            color: #fff;
+            font-size: 1.1rem;
+            text-decoration: none;
+            padding: 0.2rem 0.5rem;
+            border-radius: 0.3rem;
+            transition: background 0.2s, color 0.2s;
+        }
+        .menu-bar-under-hero .nav-link:hover {
+            background: rgba(255,255,255,0.08);
+            color: #e0e0e0;
+        }
+        @media (max-width: 900px) {
+            .menu-bar-under-hero {
+                right: 1rem;
+                bottom: 1rem;
+            }
+            .menu-bar-under-hero .nav-menu {
+                gap: 0.5rem;
+                padding: 0.5rem 1rem;
+            }
+        }
+        @media (max-width: 600px) {
+            .menu-bar-under-hero {
+                right: 0.5rem;
+                bottom: 0.5rem;
+            }
+            .menu-bar-under-hero .nav-menu {
+                gap: 0.3rem;
+                padding: 0.4rem 0.5rem;
+            }
+        }
     </style>
 </head>
 <body class="bg-gradient-to-b from-purple-100 to-blue-100 font-sans">
     <!-- Header Section -->
     <header class="hero-header text-white shadow-lg">
-        <nav class="nav-menu animate-fade-up animation-delay-400">
-            <a href="#about" class="nav-link">About</a>
-            <a href="#skills" class="nav-link">Skills</a>
-            <a href="#projects" class="nav-link">Projects</a>
-            <a href="#contact" class="nav-link">Contact</a>
-        </nav>
         <div class="hero-inner">
             <div class="header-content">
                 <h1 class="text-5xl font-extrabold animate-fade-up">Dhananjaya Weerakoon</h1>
@@ -244,6 +287,15 @@
             <div class="hero-image animate-fade-up animation-delay-400">
                 <img src="profile.png" alt="Profile Photo" />
             </div>
+        </div>
+        <!-- Menu bar under first page, bottom-right inside hero section -->
+        <div class="menu-bar-under-hero">
+            <nav class="nav-menu">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
         </div>
     </header>
 
